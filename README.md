@@ -1,6 +1,6 @@
 # Intermodal
 
-Intermodal is a collection of guest containers for use within the Harbor platform. Like intermodal shipping container these are standardized to provide a consistent base; with common entry-points supporting both [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) (utilizing OpenStack/EC2 metadata) and [Systemd](https://github.com/systemd).
+Intermodal is a collection of guest containers for use within the Harbor platform. Like [intermodal shipping containers](https://en.wikipedia.org/wiki/Intermodal_container) these are standardized to provide a consistent base; with common entry-points supporting both [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) (utilizing OpenStack/EC2 metadata) and [Systemd](https://github.com/systemd).
 
 ## Builds / Release
 
