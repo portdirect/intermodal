@@ -1,0 +1,8 @@
+#!/bin/sh
+OPENSTACK_NETWORK_DATA=/var/lib/cloud/seed/config_drive/openstack/latest/network_data.json
+DNS_SERVERS="$(jq '.services[] | select(.type=="dns") | .address' --raw-output ${OPENSTACK_NETWORK_DATA})"
+if ! [ -z "${DNS_SERVERS}" ]; then
+  for DNS_SERVER in ${DNS_SERVERS}; do
+    echo "nameserver ${DNS_SERVER}" >> /etc/resolv.conf
+  done
+fi

@@ -7,8 +7,6 @@
 
 [Unit]
 Description=Hostname Service
-Documentation=man:systemd-hostnamed.service(8) man:hostname(5) man:machine-info((
-5)
 Documentation=http://www.freedesktop.org/wiki/Software/systemd/hostnamed
 
 [Service]

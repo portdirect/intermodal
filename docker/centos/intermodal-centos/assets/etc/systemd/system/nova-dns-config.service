@@ -1,0 +1,12 @@
+[Unit]
+Description=Openstack Nova Config DNS
+Before=network-online.target
+Before=cloud-init.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nova-update-resolv
+RemainAfterExit=yes
+
+[Install]
+WantedBy=network-online.target

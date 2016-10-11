@@ -1,0 +1,12 @@
+[Unit]
+Description=Openstack Nova Manager Wait Online
+Before=network-online.target
+Before=cloud-init.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "until ip route | grep -q '^default'; do sleep 0.5 ; done"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=network-online.target
